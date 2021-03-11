@@ -1,0 +1,27 @@
+CREATE DATABASE algarve_from_sky;
+
+
+USE algarve_from_sky;
+
+CREATE TABLE newsletter (
+id_sub INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+state_sub BOOLEAN NOT NULL,
+name VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL
+) ENGINE = INNODB;
+
+
+CREATE TABLE users (
+id_user INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+state_user BOOLEAN NOT NULL,
+name VARCHAR(50) NOT NULL,
+address VARCHAR(300) NOT NULL,
+address_invoice VARCHAR(300) NOT NULL,
+number_invoice INTEGER NOT NULL,
+email VARCHAR(50) NOT NULL,
+state_sub BOOLEAN NOT NULL
+) ENGINE = INNODB;
+
+
+
+
