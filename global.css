@@ -1,0 +1,219 @@
+/*--------------------------------------------------------------
+# Import
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/*--------------------------------------------------------------
+# General html tags
+--------------------------------------------------------------*/
+html {
+    font-family: 'Raleway', 'Roboto', sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    scroll-behavior: smooth;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #272829;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-top: 2px solid whitesmoke;
+	width:128px;
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+  }
+
+footer h4{
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+# Styles by Id
+--------------------------------------------------------------*/
+
+#carouselStart h2{
+	font-size: 6vw;
+	font-weight: 500;
+    color:whitesmoke;
+    text-shadow: -3px 3px black;
+}
+
+#carouselStart lead{
+	font-size: calc(0.25rem+0.25vw);
+	font-weight: 400;
+	margin-bottom: 0;
+    color: lightyellow;
+    text-shadow: -1px 1px black;
+}
+
+#carouselStart p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    color: lightyellow;
+    text-shadow: -1px 1px black;
+}
+
+#carouselStart .carousel-indicators{
+    z-index: 1030;
+}
+
+#carouselStart img{
+	height: 100vh; /* 100% da altura do viewport  */
+	width: 100%; /* Enche toda a largura do ecrã  */
+    overflow: hidden; /* O excedente fica escondido  */
+    object-fit: cover
+}
+
+#clientMenu i{
+	color: darkslategray;
+	font-size: 5rem;
+	font-weight: 300;
+	line-height: 1.6;
+	text-decoration: none;
+	transition: transform 0.6s,color 0.6s;
+}
+
+#clientMenu i:hover{
+	color: lightseagreen;
+	transition-delay: 0.25s;
+	transition-timing-function: ease-in-out;
+	transform: translateY(-10%);
+}
+
+#clientMenu a{
+	color: black;
+	font-size: 3rem;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Styles by Class
+--------------------------------------------------------------*/
+
+.box-footer{
+	color: darkslategray;
+	padding: 1rem;
+	background-color: whitesmoke;
+	max-height: 33%;
+	text-decoration: none;
+}
+
+
+.carousel-indicators li{
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 100%;
+}
+
+.carousel-extra{
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial;
+}
+
+.menu-home {
+	padding: 30px 0 0 0;
+	width: 100%;
+	max-height: 33%;
+	margin: 0 auto;
+  }
+
+.nav-item a>i{
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.nav-mystyle{
+    font-size: 0.75rem;
+    opacity: 0.45; /* Opacidade do Nav */
+	transition: opacity 0.4s;
+}
+
+.nav-mystyle:hover{
+	opacity: 0.95;
+}
+
+.bg-intro{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+    background: radial-gradient(circle, rgba(16,16,16,1) 0%, rgba(0,0,0,1) 50%, rgba(16,16,16,1) 100%);
+	z-index: 1029; /*Prioridade nível 1*/
+    text-align: center;
+    vertical-align: center;
+    animation-name: bg-intro-anim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    opacity:0;
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Keyframes
+--------------------------------------------------------------*/
+
+@keyframes bg-intro-anim{
+    from {opacity:1}
+    to {opacity:0}
+}
